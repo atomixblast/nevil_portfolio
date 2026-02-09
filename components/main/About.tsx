@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 import { motion } from "framer-motion";
 import { slideInFromBottom, slideInFromLeft, slideInFromRight, slideInFromTop } from "@/utils/motion";
@@ -40,9 +41,8 @@ const About = () => {
                             animate={inView ? "visible" : "hidden"}
                             variants={slideInFromLeft(0.5)}
                             className="flex flex-col items-center w-[250px] h-[250px] rounded-full overflow-hidden border-[6px] border-[#7042f88b] bg-gradient-to-r from-purple-500 to-cyan-500"
-
                         >
-                            <img src="/nevil.png" alt="profile" width={250} />
+                            <Image src="/nevil.png" alt="profile" width={250} height={250} />
                         </motion.div>
                     )}
                 </InView>
